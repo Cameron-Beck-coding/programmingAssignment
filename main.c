@@ -7,7 +7,6 @@
 int whatToPrint(int numOfWrongGuesses);
 int printer(char file[]);
 char *wordGetter(int maxLength);
-char *guessSetter(char *word);
 int main(void)
 {
        char playAgain;
@@ -19,9 +18,9 @@ int main(void)
        char allGuesses[250];
        int totalGuesses = 0;
        int totalLosses = 0;
-       int maxWordLength=0;
+       int maxWordLength = 0;
        printf("Enter a max word length, if you don't care, enter 0\n");
-       scanf("%d",&maxWordLength);
+       scanf("%d", &maxWordLength);
        char *mysteryWord = wordGetter(maxWordLength);
        char notGuessed[(strlen(mysteryWord) + 1)];
        for (int i = 0; i < strlen(mysteryWord); i++)
@@ -42,15 +41,16 @@ int main(void)
                      {
                             for (int i = 0; i < totalGuesses; i++)
                             {
-                                   printf("%s,", &allGuesses[i]);
+                                   putchar(allGuesses[i]);
+                                   printf(" ");
                             }
                      }
                      printf("\n%s\n", notGuessed);
                      printf("Guess a letter!\n");
-                     guess = getchar();
+                     scanf("%s",&guess);
+                     //all guesses gets set incorrectly due to new line, need to ask about this
                      allGuesses[totalGuesses] = guess;
                      totalGuesses++;
-                     getchar(); //to consume \n
                      //determining if guess was correct
                      for (int i = 0; i < strlen(mysteryWord); i++)
                      {
@@ -84,7 +84,7 @@ int main(void)
                             if (playAgain == 'Y')
                             {
                                    //getting new random word, and setting underlines again
-                                   mysteryWord = wordGetter();
+                                   mysteryWord = wordGetter(maxWordLength);
                                    for (int i = 0; i < strlen(mysteryWord); i++)
                                    {
                                           notGuessed[i] = '_';
@@ -110,7 +110,7 @@ int main(void)
                      if (playAgain == 'Y' || playAgain == 'Y')
                      {
                             //getting new random word, and setting underlines again
-                            mysteryWord = wordGetter();
+                            mysteryWord = wordGetter(maxWordLength);
                             for (int i = 0; i < strlen(mysteryWord); i++)
                             {
                                    notGuessed[i] = '_';
@@ -212,16 +212,18 @@ char *wordGetter(int maxLength)
        }
        fclose(inputFile);
        //getting random word, and only returning if it matches criteria
-       while(1){
-       int wordIndex = rand() % count;
-       char *mysteryWord = words[wordIndex];
-       if(strlen(mysteryWord)<=wordlength &&wordlength>0)
+       while (1)
        {
-              return mysteryWord;
-       }
-       else if(wordlength==0){
-              return mysteryWord;
-       }
+              int wordIndex = rand() % count;
+              char *mysteryWord = words[wordIndex];
+              if (strlen(mysteryWord) <= wordlength && wordlength > 0)
+              {
+                     return mysteryWord;
+              }
+              else if (wordlength == 0)
+              {
+                     return mysteryWord;
+              }
        }
 }
 //setting the underlines, made it as a seperate function for modulization
