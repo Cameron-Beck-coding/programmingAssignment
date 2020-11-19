@@ -264,7 +264,6 @@ aquarium
 aquifer
 arcade
 arch
-arch-rival
 archaeologist
 archaeology
 archeology
@@ -278,7 +277,6 @@ argument
 arithmetic
 ark
 arm
-arm-rest
 armadillo
 armament
 armchair
@@ -388,7 +386,6 @@ babushka
 baby
 bachelor
 back
-back-up
 backbone
 backburn
 backdrop
@@ -541,7 +538,6 @@ beneficiary
 benefit
 beret
 berry
-best-seller
 bestseller
 bet
 beverage
@@ -569,7 +565,6 @@ biosphere
 biplane
 birch
 bird
-bird-watcher
 birdbath
 birdcage
 birdhouse
@@ -666,7 +661,6 @@ bother
 bottle
 bottling
 bottom
-bottom-line
 boudoir
 bough
 boulder
@@ -743,7 +737,6 @@ brood
 brook
 broom
 brother
-brother-in-law
 brow
 brown
 brownie
@@ -772,7 +765,6 @@ building
 bulb
 bulk
 bull
-bull-fighter
 bulldozer
 bullet
 bump
@@ -788,7 +780,6 @@ burglar
 burial
 burlesque
 burn
-burn-out
 burning
 burrito
 burro
@@ -811,7 +802,6 @@ buyer
 buying
 buzz
 buzzard
-c-clamp
 cabana
 cabbage
 cabin
@@ -1064,7 +1054,6 @@ chinchilla
 chino
 chip
 chipmunk
-chit-chat
 chivalry
 chive
 chives
@@ -1179,7 +1168,6 @@ club
 clue
 cluster
 clutch
-co-producer
 coach
 coal
 coalition
@@ -1400,7 +1388,6 @@ cooperation
 coordination
 coordinator
 cop
-cop-out
 cope
 copper
 copy
@@ -1449,7 +1436,6 @@ counsellor
 counselor
 count
 counter
-counter-force
 counterpart
 counterterrorism
 countess
@@ -1534,8 +1520,6 @@ croissant
 crook
 crop
 cross
-cross-contamination
-cross-stitch
 crotch
 croup
 crow
@@ -1558,7 +1542,6 @@ cube
 cuckoo
 cucumber
 cue
-cuff-link
 cuisine
 cultivar
 cultivator
@@ -1656,7 +1639,6 @@ decadence
 decency
 decimal
 decision
-decision-making
 deck
 declaration
 declination
@@ -1982,9 +1964,6 @@ dynamite
 dynamo
 dynasty
 dysfunction
-e-book
-e-mail
-e-reader
 eagle
 eaglet
 ear
@@ -2169,7 +2148,6 @@ evaluator
 evaporation
 eve
 evening
-evening-wear
 event
 everybody
 everyone
@@ -2179,8 +2157,6 @@ evidence
 evil
 evocation
 evolution
-ex-husband
-ex-wife
 exaggeration
 exam
 examination
@@ -2266,7 +2242,6 @@ faith
 faithful
 fall
 fallacy
-falling-out
 fame
 familiar
 familiarity
@@ -2275,7 +2250,6 @@ fan
 fang
 fanlight
 fanny
-fanny-pack
 fantasy
 farm
 farmer
@@ -2287,7 +2261,6 @@ fashion
 fat
 fate
 father
-father-in-law
 fatigue
 fatigues
 faucet
@@ -2403,7 +2376,6 @@ flicker
 flight
 flint
 flintlock
-flip-flops
 flock
 flood
 floodplain
@@ -2546,7 +2518,6 @@ gaffer
 gain
 gaiters
 gale
-gall-bladder
 gallery
 galley
 gallon
@@ -2555,7 +2526,6 @@ gambling
 game
 gamebird
 gaming
-gamma-ray
 gander
 gang
 gap
@@ -2647,7 +2617,6 @@ glut
 glutamate
 gnat
 gnu
-go-kart
 goal
 goat
 gobbler
@@ -2664,7 +2633,6 @@ golf
 gondola
 gong
 good
-good-bye
 goodbye
 goodie
 goodness
@@ -2679,7 +2647,6 @@ governance
 government
 governor
 gown
-grab-bag
 grace
 grade
 gradient
@@ -2719,8 +2686,6 @@ gravity
 gravy
 gray
 grease
-great-grandfather
-great-grandmother
 greatness
 greed
 green
@@ -2781,8 +2746,6 @@ hair
 haircut
 hake
 half
-half-brother
-half-sister
 halibut
 hall
 halloween
@@ -2794,7 +2757,6 @@ hammer
 hammock
 hamster
 hand
-hand-holding
 handball
 handful
 handgun
@@ -2811,7 +2773,6 @@ happiness
 harald
 harbor
 harbour
-hard-hat
 hardboard
 hardcover
 hardening
@@ -2856,11 +2817,9 @@ headphones
 headquarters
 headrest
 health
-health-care
 hearing
 hearsay
 heart
-heart-throb
 heartache
 heartbeat
 hearth
@@ -2907,7 +2866,6 @@ hiccups
 hide
 hierarchy
 high
-high-rise
 highland
 highlight
 highway
@@ -3036,7 +2994,6 @@ hypochondria
 hypothermia
 hypothesis
 ice
-ice-cream
 iceberg
 icebreaker
 icecream
@@ -3085,8 +3042,6 @@ impropriety
 improvement
 impudence
 impulse
-in-joke
-in-laws
 inability
 inauguration
 inbox
@@ -3321,7 +3276,6 @@ keyboard
 keyboarding
 keystone
 kick
-kick-off
 kid
 kidney
 kielbasa
@@ -3351,12 +3305,10 @@ knee
 kneejerk
 knickers
 knife
-knife-edge
 knight
 knitting
 knock
 knot
-know-how
 knowledge
 knuckle
 koala
@@ -3634,7 +3586,6 @@ maintainer
 maintenance
 maize
 major
-major-league
 majority
 makeover
 maker
@@ -3803,7 +3754,6 @@ microlending
 micronutrient
 microphone
 microwave
-mid-course
 midden
 middle
 middleman
@@ -3836,7 +3786,6 @@ mine
 mineral
 mineshaft
 mini
-mini-skirt
 minibus
 minimalism
 minimum
@@ -3846,7 +3795,6 @@ minister
 mink
 minnow
 minor
-minor-league
 minority
 mint
 minute
@@ -3936,7 +3884,6 @@ most
 motel
 moth
 mother
-mother-in-law
 motion
 motivation
 motive
@@ -3971,8 +3918,6 @@ musculature
 museum
 mushroom
 music
-music-box
-music-making
 musician
 muskrat
 mussel
@@ -4135,7 +4080,6 @@ octopus
 odometer
 odyssey
 oeuvre
-off-ramp
 offence
 offense
 offer
@@ -4391,7 +4335,6 @@ pedal
 peek
 peen
 peer
-peer-to-peer
 pegboard
 pelican
 pelt
@@ -4500,7 +4443,6 @@ pimp
 pimple
 pin
 pinafore
-pince-nez
 pine
 pineapple
 pinecone
@@ -4577,7 +4519,6 @@ plunger
 plywood
 pneumonia
 pocket
-pocket-watch
 pocketbook
 pod
 podcast
@@ -4756,7 +4697,6 @@ prompt
 pronoun
 pronunciation
 proof
-proof-reader
 propaganda
 propane
 property
@@ -5138,7 +5078,6 @@ robotics
 rock
 rocker
 rocket
-rocket-ship
 rod
 role
 roll
@@ -5296,7 +5235,6 @@ screen
 screening
 screenwriting
 screw
-screw-up
 screwdriver
 scrim
 scrip
@@ -5337,9 +5275,6 @@ segment
 seizure
 selection
 self
-self-confidence
-self-control
-self-esteem
 seller
 selling
 semantics
@@ -5429,7 +5364,6 @@ shit
 shoat
 shock
 shoe
-shoe-horn
 shoehorn
 shoelace
 shoemaker
@@ -5452,7 +5386,6 @@ shoulder
 shout
 shovel
 show
-show-stopper
 shower
 shred
 shrimp
@@ -5502,7 +5435,6 @@ sinuosity
 sip
 sir
 sister
-sister-in-law
 sitar
 site
 situation
@@ -5756,7 +5688,6 @@ stance
 stand
 standard
 standardisation
-standardization
 standing
 standoff
 standpoint
@@ -5768,7 +5699,6 @@ state
 statement
 statin
 station
-station-wagon
 statistic
 statistics
 statue
@@ -5785,19 +5715,8 @@ stem
 stench
 stencil
 step
-step-aunt
-step-brother
-step-daughter
-step-father
-step-grandfather
-step-grandmother
-step-mother
-step-sister
-step-son
-step-uncle
 stepdaughter
 stepmother
-stepping-stone
 stepson
 stereo
 stew
@@ -5810,11 +5729,9 @@ stimulation
 stimulus
 sting
 stinger
-stir-fry
 stitch
 stitcher
 stock
-stock-in-trade
 stockings
 stole
 stomach
@@ -5829,7 +5746,6 @@ store
 storey
 storm
 story
-story-telling
 storyboard
 stot
 stove
@@ -5996,7 +5912,6 @@ synonym
 synthesis
 syrup
 system
-t-shirt
 tab
 tabby
 tabernacle
@@ -6015,13 +5930,11 @@ tail
 tailbud
 tailor
 tailspin
-take-out
 takeover
 tale
 talent
 talk
 talking
-tam-o'-shanter
 tamale
 tambour
 tambourine
@@ -6029,7 +5942,6 @@ tan
 tandem
 tangerine
 tank
-tank-top
 tanker
 tankful
 tap
@@ -6204,7 +6116,6 @@ toilet
 tolerance
 tolerant
 toll
-tom-tom
 tomatillo
 tomato
 tomb
@@ -6223,7 +6134,6 @@ toothbrush
 toothpaste
 toothpick
 top
-top-hat
 topic
 topsail
 toque
@@ -6238,12 +6148,10 @@ tosser
 total
 tote
 touch
-tough-guy
 tour
 tourism
 tourist
 tournament
-tow-truck
 towel
 tower
 town
@@ -6352,7 +6260,6 @@ tumbler
 tummy
 tuna
 tune
-tune-up
 tunic
 tunnel
 turban
@@ -6587,7 +6494,6 @@ wardrobe
 warfare
 warlock
 warlord
-warm-up
 warming
 warmth
 warning
@@ -6644,10 +6550,8 @@ weird
 welcome
 welfare
 well
-well-being
 west
 western
-wet-bar
 wetland
 wetsuit
 whack
@@ -6684,7 +6588,6 @@ willingness
 willow
 win
 wind
-wind-chime
 windage
 window
 windscreen
@@ -6706,7 +6609,6 @@ wish
 wisteria
 wit
 witch
-witch-hunt
 withdrawal
 witness
 wok
@@ -6797,5 +6699,4 @@ zone
 zoo
 zoologist
 zoology
-zoot-suit
 zucchini

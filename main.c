@@ -7,6 +7,7 @@
 int whatToPrint(int numOfWrongGuesses);
 int printer(char file[]);
 char *wordGetter(int maxLength);
+int wordComp(char *word1, char *word2);
 int main(void)
 {
        char playAgain;
@@ -19,16 +20,19 @@ int main(void)
        int totalGuesses = 0;
        int totalLosses = 0;
        int maxWordLength = 0;
+       printf("Cameron Beck's Hangman!\n");
        printf("Enter a max word length, if you don't care, enter 0\n");
        scanf("%d", &maxWordLength);
        char *mysteryWord = wordGetter(maxWordLength);
-       char notGuessed[(strlen(mysteryWord) + 1)];
+       printf("%s", mysteryWord);
+       char notGuessed[(strlen(mysteryWord))];
        for (int i = 0; i < strlen(mysteryWord); i++)
        {
               notGuessed[i] = '_';
        }
-       notGuessed[strlen(mysteryWord) + 1] = '\0';
        //ending the character array so it prints properly
+       notGuessed[strlen(mysteryWord) + 1] = '\0';
+       //game loop
        while (1)
        {
               gotright = 0;
@@ -47,8 +51,7 @@ int main(void)
                      }
                      printf("\n%s\n", notGuessed);
                      printf("Guess a letter!\n");
-                     scanf("%s",&guess);
-                     //all guesses gets set incorrectly due to new line, need to ask about this
+                     scanf("%s", &guess);
                      allGuesses[totalGuesses] = guess;
                      totalGuesses++;
                      //determining if guess was correct
@@ -68,20 +71,20 @@ int main(void)
                      else
                      {
                             printf("Correct!\n");
-                            continue;
                      }
-                     if (strcmp(mysteryWord, notGuessed) == 0)
+                     //can't use strcmp here due to weirdness with how we set
+                     //up notGuessed
+                     if (wordComp(mysteryWord, notGuessed) == 0)
                      {
-                            printf("WOOOOO congrats!!]\n");
+                            printf("WOOOOO congrats!!\n");
                             totalWins++;
-                            printf("You've won a total of %d times, and lost %d"
+                            printf("You've won a total of %d times,and lost %d"
                                    "times\n",
                                    totalWins, totalLosses);
                             printf("Want to play again?\n");
                             scanf("%s", &playAgain);
                             //we do this so we can only check for upper inputs
-                            toupper(playAgain);
-                            if (playAgain == 'Y')
+                            if (playAgain == 'Y'|| playAgain=='y')
                             {
                                    //getting new random word, and setting underlines again
                                    mysteryWord = wordGetter(maxWordLength);
@@ -99,6 +102,7 @@ int main(void)
                             }
                      }
               }
+              //if they lost
               else
               {
                      printf("You got it wrong! The word was %s\n", mysteryWord);
@@ -106,7 +110,7 @@ int main(void)
                             "times\n",
                             totalWins, totalLosses);
                      printf("Want to play again?\n");
-                     scanf("%s\n", &playAgain);
+                     scanf("%s", &playAgain);
                      if (playAgain == 'Y' || playAgain == 'Y')
                      {
                             //getting new random word, and setting underlines again
@@ -202,6 +206,7 @@ char *wordGetter(int maxLength)
        {
               count++;
        }
+
        rewind(inputFile);
        //putting all the words into an array, so we can pull them out later
        //we use 45 here because it is the longest word in the english dict
@@ -211,19 +216,30 @@ char *wordGetter(int maxLength)
               fscanf(inputFile, "%s", words[i]);
        }
        fclose(inputFile);
-       //getting random word, and only returning if it matches criteria
+       //getting random word,and only returning if it matches criteria sent in
        while (1)
        {
               int wordIndex = rand() % count;
               char *mysteryWord = words[wordIndex];
-              if (strlen(mysteryWord) <= wordlength && wordlength > 0)
+              if (strlen(mysteryWord) <= maxLength && maxLength > 0)
               {
                      return mysteryWord;
               }
-              else if (wordlength == 0)
+              else if (maxLength == 0)
               {
                      return mysteryWord;
               }
        }
 }
-//setting the underlines, made it as a seperate function for modulization
+//comparing the words
+int wordComp(char *word1, char *word2)
+{
+       for (int i = 0; i < strlen(word1); i++)
+       {
+              if (word1[i] != word2[i])
+              {
+                     return 1;
+              }
+       }
+       return 0;
+}
