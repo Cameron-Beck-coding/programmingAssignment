@@ -93,12 +93,14 @@ int main(void)
                             {
                                    //reseting the game
                                    wrongGuesses=0;
+                                   totalGuesses=0;
+                                   strcpy(allGuesses,"");
                                    wordGetter(maxWordLength,mysteryWord);
                                    for (int i = 0; i < strlen(mysteryWord); i++)
                                    {
                                           notGuessed[i] = '_';
                                    }
-                                   notGuessed[strlen(mysteryWord) + 1] = '\0';
+                                   notGuessed[strlen(mysteryWord)] = '\0';
                                    continue;
                             }
                             else
@@ -122,12 +124,14 @@ int main(void)
                      {
                             //getting new random word, and setting underlines again
                             wrongGuesses=0;
+                            totalGuesses=0;
+                            strcpy(allGuesses, "");
                             wordGetter(maxWordLength,mysteryWord);
                             for (int i = 0; i < strlen(mysteryWord); i++)
                             {
                                    notGuessed[i] = '_';
                             }
-                            notGuessed[strlen(mysteryWord) + 1] = '\0';
+                            notGuessed[strlen(mysteryWord)] = '\0';
                             continue;
                      }
                      else
