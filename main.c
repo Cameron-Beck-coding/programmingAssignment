@@ -78,7 +78,7 @@ int main(void)
                      {
                             printf("WOOOOO congrats!!\n");
                             totalWins++;
-                            printf("You've won a total of %d times,and lost %d"
+                            printf("You've won a total of %d times,and lost %d "
                                    "times\n",
                                    totalWins, totalLosses);
                             printf("Want to play again?\n");
@@ -86,7 +86,8 @@ int main(void)
                             //we do this so we can only check for upper inputs
                             if (playAgain == 'Y'|| playAgain=='y')
                             {
-                                   //getting new random word, and setting underlines again
+                                   //reseting the game
+                                   wrongGuesses=0;
                                    mysteryWord = wordGetter(maxWordLength);
                                    for (int i = 0; i < strlen(mysteryWord); i++)
                                    {
@@ -105,15 +106,17 @@ int main(void)
               //if they lost
               else
               {
+                     totalLosses++;
                      printf("You got it wrong! The word was %s\n", mysteryWord);
-                     printf("You've won a total of %d times, and lost %d"
+                     printf("You've won a total of %d times, and lost %d "
                             "times\n",
                             totalWins, totalLosses);
                      printf("Want to play again?\n");
                      scanf("%s", &playAgain);
-                     if (playAgain == 'Y' || playAgain == 'Y')
+                     if (playAgain == 'Y' || playAgain == 'y')
                      {
                             //getting new random word, and setting underlines again
+                            wrongGuesses=0;
                             mysteryWord = wordGetter(maxWordLength);
                             for (int i = 0; i < strlen(mysteryWord); i++)
                             {
