@@ -6,7 +6,7 @@
 #include <time.h>
 int whatToPrint(int numOfWrongGuesses);
 int printer(char file[]);
-char *wordGetter(int maxLength);
+void wordGetter(int maxLength,char* newWord);
 int wordComp(char *word1, char *word2);
 int main(void)
 {
@@ -20,18 +20,23 @@ int main(void)
        int totalGuesses = 0;
        int totalLosses = 0;
        int maxWordLength = 0;
+       //allocating space to be filled later
+       char *mysteryWord = malloc(sizeof(char[45]));
        printf("Cameron Beck's Hangman!\n");
        printf("Enter a max word length, if you don't care, enter 0\n");
        scanf("%d", &maxWordLength);
-       char *mysteryWord = wordGetter(maxWordLength);
+       wordGetter(maxWordLength,mysteryWord);
+       //TODO:remove this before submitting
        printf("%s", mysteryWord);
-       char notGuessed[(strlen(mysteryWord))];
-       for (int i = 0; i < strlen(mysteryWord); i++)
+       //for easy use in the for loop
+       int len = strlen(mysteryWord);
+       char notGuessed[(len)];
+       for (int i = 0; i < len; i++)
        {
               notGuessed[i] = '_';
        }
        //ending the character array so it prints properly
-       notGuessed[strlen(mysteryWord) + 1] = '\0';
+       notGuessed[len] = '\0';
        //game loop
        while (1)
        {
@@ -88,7 +93,7 @@ int main(void)
                             {
                                    //reseting the game
                                    wrongGuesses=0;
-                                   mysteryWord = wordGetter(maxWordLength);
+                                   wordGetter(maxWordLength,mysteryWord);
                                    for (int i = 0; i < strlen(mysteryWord); i++)
                                    {
                                           notGuessed[i] = '_';
@@ -117,7 +122,7 @@ int main(void)
                      {
                             //getting new random word, and setting underlines again
                             wrongGuesses=0;
-                            mysteryWord = wordGetter(maxWordLength);
+                            wordGetter(maxWordLength,mysteryWord);
                             for (int i = 0; i < strlen(mysteryWord); i++)
                             {
                                    notGuessed[i] = '_';
@@ -132,6 +137,7 @@ int main(void)
                      }
               }
        }
+       free(mysteryWord);
        return 0;
 }
 //conditionally prints the hangman based on how many guesses are wrong
@@ -192,12 +198,14 @@ int printer(char file[])
        printf("\n");
 }
 //gets a random word from the words.txt file
-char *wordGetter(int maxLength)
+void wordGetter(int maxLength,char* newWord)
 {
        //making sure that the seed is random each time a new word is called
        srand(time(0));
        FILE *inputFile;
        int count = 0;
+       //used to exit the array    
+       int wordFound = 1;
        char word[256];
        //temporary variable so we can count the number of lines
        char temp[256];
@@ -220,17 +228,21 @@ char *wordGetter(int maxLength)
        }
        fclose(inputFile);
        //getting random word,and only returning if it matches criteria sent in
-       while (1)
+       while (wordFound)
        {
               int wordIndex = rand() % count;
               char *mysteryWord = words[wordIndex];
               if (strlen(mysteryWord) <= maxLength && maxLength > 0)
               {
-                     return mysteryWord;
+                     //we have to copy the string here, because returning 
+                     // the string causes stack problems
+                     strcpy(newWord,mysteryWord);
+                     wordFound=0;
               }
               else if (maxLength == 0)
               {
-                     return mysteryWord;
+                     strcpy(newWord, mysteryWord);
+                     wordFound=0;
               }
        }
 }
